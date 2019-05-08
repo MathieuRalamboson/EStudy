@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "530359023875",
+    "firebase_url": "https://e-studyquizz.firebaseio.com",
+    "project_id": "e-studyquizz",
+    "storage_bucket": "e-studyquizz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530359023875:android:76d30acf4c36ff81",
+        "android_client_info": {
+          "package_name": "com.example.e_study"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530359023875-lnbeap20q9nlvbuejn5to4sih32ot0p6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.e_study",
+            "certificate_hash": "1653b634c9d34867351ba55482aff6b14c7910df"
+          }
+        },
+        {
+          "client_id": "530359023875-8l3g55ibgbbnr2tq1esrcatjuo9jbj9v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8b1SQlQdz0k1GuTniPYHIwp-8geU-bzA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530359023875-8l3g55ibgbbnr2tq1esrcatjuo9jbj9v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
