@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.e_study.Model.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     if(!user.isEmpty())
                     {
-                        User login = dataSnapshot.child(user).getValue(User.class);
+                        com.example.e_study.Model.User login = dataSnapshot.child(user).getValue(User.class);
                         if(login.getPassword().equals(pwd))
                             Toast.makeText(MainActivity.this,"Login ok", Toast.LENGTH_SHORT).show();
                         else
