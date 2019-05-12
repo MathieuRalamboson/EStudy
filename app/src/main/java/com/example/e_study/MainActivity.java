@@ -2,6 +2,7 @@ package com.example.e_study;
 
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -67,19 +68,23 @@ public class MainActivity extends AppCompatActivity {
                     if(!user.isEmpty())
                     {
                         com.example.e_study.Model.User login = dataSnapshot.child(user).getValue(User.class);
-                        if(login.getPassword().equals(pwd))
-                            Toast.makeText(MainActivity.this,"Login ok", Toast.LENGTH_SHORT).show();
+                        if(login.getPassword().equals(pwd)) {
+                            Toast.makeText(MainActivity.this, "Connection accordé", Toast.LENGTH_SHORT).show();
+                            Intent homeActivity = new Intent(MainActivity.this, Home.class);
+                            startActivity(homeActivity);
+                            finish();
+                        }
                         else
-                            Toast.makeText(MainActivity.this,"Wrong password", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this,"Mot de passe incorect !", Toast.LENGTH_SHORT).show();
 
                     }
                     else
                     {
-                        Toast.makeText(MainActivity.this,"Please enter your user name", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,"Entrer votre nom d'utilisateur svp !", Toast.LENGTH_SHORT).show();
                     }
                 }
                 else
-                    Toast.makeText(MainActivity.this,"User is not exists", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"Utilisateur non existant", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -122,11 +127,11 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         if(dataSnapshot.child(user.getUserName()).exists())
-                            Toast.makeText(MainActivity.this,"User already exist !", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this,"Utilisateur déja existant !", Toast.LENGTH_SHORT).show();
                         else{
                             users.child(user.getUserName())
                                     .setValue(user);
-                            Toast.makeText(MainActivity.this,"User registration success !", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this,"Inscription réussie !", Toast.LENGTH_SHORT).show();
                         }
                     }
 
