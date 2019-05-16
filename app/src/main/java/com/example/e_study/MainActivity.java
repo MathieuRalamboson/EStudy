@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.e_study.Common.Common;
 import com.example.e_study.Model.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -69,8 +70,9 @@ public class MainActivity extends AppCompatActivity {
                     {
                         com.example.e_study.Model.User login = dataSnapshot.child(user).getValue(User.class);
                         if(login.getPassword().equals(pwd)) {
-                            Toast.makeText(MainActivity.this, "Connection accordé", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(MainActivity.this, "Connection accordé", Toast.LENGTH_SHORT).show();
                             Intent homeActivity = new Intent(MainActivity.this, Home.class);
+                            Common.currentUser = login;
                             startActivity(homeActivity);
                             finish();
                         }
