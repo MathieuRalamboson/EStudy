@@ -63,7 +63,7 @@ public class Done extends AppCompatActivity {
 
             //Upload point to DataBase
             question_score.child(String.format("s_%s" , Common.currentUser.getUserName(),
-                    Common.categoryId))
+                                                        Common.categoryId))
                     .setValue(new QuestionScore(String.format("s_%s" , Common.currentUser.getUserName(),
                             Common.categoryId),
                             Common.currentUser.getUserName(),

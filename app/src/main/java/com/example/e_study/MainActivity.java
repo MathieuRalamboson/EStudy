@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     if(!user.isEmpty())
                     {
-                        com.example.e_study.Model.User login = dataSnapshot.child(user).getValue(User.class);
+                        User login = dataSnapshot.child(user).getValue(User.class);
                         if(login.getPassword().equals(pwd)) {
                             //Toast.makeText(MainActivity.this, "Connection accordé", Toast.LENGTH_SHORT).show();
                             Intent homeActivity = new Intent(MainActivity.this, Home.class);

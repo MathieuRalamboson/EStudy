@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.e_study.Common.Common;
 import com.google.firebase.database.DatabaseReference;
@@ -63,10 +64,11 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
         if(index < totalQuestion) //Tjr une question en cours
         {
             Button clickedButton = (Button)view;
+            //Toast.makeText(this, "Boutton %s",  Toast.LENGTH_SHORT).show();
             if(clickedButton.getText().equals(Common.questionList.get(index).getCorrectAnswer()))
             {
                 //Choix bonne reponse
-                score += 10;
+                score+= 10;
                 correctAnswer++;
                 showQuestion(++index); //Prochaine Question
             }
