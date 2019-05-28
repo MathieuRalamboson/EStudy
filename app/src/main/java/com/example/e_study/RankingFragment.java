@@ -70,14 +70,14 @@ public class RankingFragment extends Fragment {
         rankingList.setLayoutManager(layoutManager);
 
 
-
+        //Implente callback
         updateScore(Common.currentUser.getUserName(), new RankingCallback<Ranking>() {
             @Override
             public void callBack(Ranking ranking) {
                 //Update Ranking table
                 rankingTbl.child(ranking.getUserName())
                         .setValue(ranking);
-                //showRanking(); //Apres upload des donnée , affichage
+                showRanking(); //Apres upload des donnée , affichage
 
             }
         });
@@ -110,6 +110,26 @@ public class RankingFragment extends Fragment {
         return myFragment;
     }
 
+    private void showRanking() {
+
+        rankingTbl.orderByChild("score")
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for(DataSnapshot data:dataSnapshot.getChildren())
+                        {
+                            Ranking local = data.getValue(Ranking.class);
+                            Log.d("DEBUG",local.getUserName());
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
+    }
 
 
     private void updateScore(final String userName, final RankingCallback<Ranking> callback) {
