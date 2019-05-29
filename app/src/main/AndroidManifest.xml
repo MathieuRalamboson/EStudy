@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Done"></activity>
+        <activity android:name=".ScoreDetail"></activity>
+        <activity android:name=".Done" />
         <activity android:name=".Playing" />
         <activity android:name=".Start" />
         <activity android:name=".Home" />

@@ -1,6 +1,7 @@
 package com.example.e_study;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -90,7 +91,7 @@ public class RankingFragment extends Fragment {
                 rankingTbl.orderByChild("score")
         ) {
             @Override
-            protected void populateViewHolder(RankingViewHolder viewHolder, Ranking model, int position) {
+            protected void populateViewHolder(RankingViewHolder viewHolder, final Ranking model, int position) {
 
                 viewHolder.txt_name.setText(model.getUserName());
                 viewHolder.txt_score.setText(String.valueOf(model.getScore()));
@@ -98,7 +99,9 @@ public class RankingFragment extends Fragment {
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-
+                        Intent scoreDetail = new Intent(getActivity(),ScoreDetail.class);
+                        scoreDetail.putExtra("viewUser",model.getUserName());
+                        startActivity(scoreDetail);
                     }
                 });
             }
