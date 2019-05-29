@@ -62,7 +62,7 @@ public class Done extends AppCompatActivity {
             progressBar.setProgress(correctAnswer);
 
             //Upload point to DataBase
-            question_score.child(String.format("s_%s" , Common.currentUser.getUserName(),
+            question_score.child(String.format("s_%s_%s" , Common.currentUser.getUserName(),
                                                         Common.categoryId))
                     .setValue(new QuestionScore(String.format("s_%s" , Common.currentUser.getUserName(),
                             Common.categoryId),

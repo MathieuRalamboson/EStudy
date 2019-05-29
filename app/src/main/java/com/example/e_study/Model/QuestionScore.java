@@ -7,7 +7,6 @@ public class QuestionScore {
     private String CategoryId;
     private String CategoryName;
 
-
     public QuestionScore() {
     }
 

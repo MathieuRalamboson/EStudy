@@ -100,7 +100,7 @@ public class RankingFragment extends Fragment {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
                         Intent scoreDetail = new Intent(getActivity(),ScoreDetail.class);
-                        scoreDetail.putExtra("viewUser",model.getUserName());
+                        scoreDetail.putExtra("viewUser", model.getUserName());
                         startActivity(scoreDetail);
                     }
                 });

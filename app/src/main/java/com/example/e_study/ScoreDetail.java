@@ -32,7 +32,7 @@ public class ScoreDetail extends AppCompatActivity {
         question_score = database.getReference("Question_Score");
 
         //View
-        scoreList = (RecyclerView)findViewById(R.id.scoreList);
+        scoreList = (RecyclerView) findViewById(R.id.scoreList);
         scoreList.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         scoreList.setLayoutManager(layoutManager);
