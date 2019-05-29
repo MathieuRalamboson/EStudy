@@ -27,7 +27,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Name"
+                android:text="Categorie"
                 android:textSize="24sp"
                 android:layout_marginLeft="10dp"
                 android:textColor="@android:color/white"
