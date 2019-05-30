@@ -84,10 +84,12 @@ public class CategoryFragment extends Fragment {
                     public void onClick(View view, int position, boolean isLongClick) {// Choix category
                         //Toast.makeText(getActivity(),String.format("%s|%s",adapter.getRef(position).getKey(),model.getName()), Toast.LENGTH_SHORT).show();
 
-                        if(position == 1){
+                        if(model.getUrl() != null){
 
                             //Ouvre un PDF
                             Intent openPdf = new Intent(getActivity(), PdfViewer.class);
+                            Common.categoryName = model.getName();
+                            Common.url = model.getUrl();
                             startActivity(openPdf);
 
                         }else{

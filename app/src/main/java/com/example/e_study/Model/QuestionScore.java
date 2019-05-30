@@ -6,16 +6,18 @@ public class QuestionScore {
     private String Score;
     private String CategoryId;
     private String CategoryName;
+    private String Url;
 
     public QuestionScore() {
     }
 
-    public QuestionScore(String question_Score, String user, String score, String categoryId, String categoryName) {
+    public QuestionScore(String question_Score, String user, String score, String categoryId, String categoryName, String url) {
         Question_Score = question_Score;
         User = user;
         Score = score;
         CategoryId = categoryId;
         CategoryName = categoryName;
+        Url = url;
     }
 
     public String getQuestion_Score() {
@@ -56,5 +58,13 @@ public class QuestionScore {
 
     public void setCategoryName(String categoryName) {
         CategoryName = categoryName;
+    }
+
+    public String getUrl() {
+        return Url;
+    }
+
+    public void setUrl(String url) {
+        Url = url;
     }
 }

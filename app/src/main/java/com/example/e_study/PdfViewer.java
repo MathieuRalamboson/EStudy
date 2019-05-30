@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.e_study.Common.Common;
 import com.github.barteksc.pdfviewer.PDFView;
 
 import java.io.BufferedInputStream;
@@ -27,7 +28,7 @@ public class PdfViewer extends AppCompatActivity {
 
 
         // Ouverture pdf a partir d'un lien en ligne
-        new RetrievePDFStream().execute("http://www.africau.edu/images/default/sample.pdf");
+        new RetrievePDFStream().execute(Common.url);
 
     }
 
