@@ -20,6 +20,7 @@ import com.example.e_study.Interface.ItemClickListener;
 import com.example.e_study.Model.Category;
 import com.example.e_study.ViewHolder.CategoryViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.github.barteksc.pdfviewer.PDFView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -80,16 +81,23 @@ public class CategoryFragment extends Fragment {
 
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
-                    public void onClick(View view, int position, boolean isLongClick) {
+                    public void onClick(View view, int position, boolean isLongClick) {// Choix category
                         //Toast.makeText(getActivity(),String.format("%s|%s",adapter.getRef(position).getKey(),model.getName()), Toast.LENGTH_SHORT).show();
 
-                        //QUIZZ ECRAN DE DEPART
-                        Intent startGame = new Intent(getActivity(),Start.class);
-                        Common.categoryId = adapter.getRef(position).getKey();
-                        Common.categoryName = model.getName();
-                        startActivity(startGame);
+                        if(position == 1){
 
+                            //Ouvre un PDF
+                            Intent openPdf = new Intent(getActivity(), PdfViewer.class);
+                            startActivity(openPdf);
 
+                        }else{
+                            //Demarre un quizz
+                            //QUIZZ ECRAN DE DEPART
+                            Intent startGame = new Intent(getActivity(),Start.class);
+                            Common.categoryId = adapter.getRef(position).getKey();
+                            Common.categoryName = model.getName();
+                            startActivity(startGame);
+                        }
 
                     }
                 });
