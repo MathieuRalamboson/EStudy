@@ -82,6 +82,14 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/btn_sign_in"
+                android:text="Connexion"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <Button
                 android:id="@+id/btn_sign_up"
                 android:text="S'inscrire"
                 style="@style/Widget.AppCompat.Button.Colored"
@@ -89,13 +97,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
 
-            <Button
-                android:id="@+id/btn_sign_in"
-                android:text="Connexion"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
