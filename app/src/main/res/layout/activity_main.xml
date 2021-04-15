@@ -43,7 +43,7 @@
 
                 <com.rengwuxian.materialedittext.MaterialEditText
                     android:id="@+id/User"
-                    android:hint="User name"
+                    android:hint="Nom d'utilisateur"
                     android:textColorHint="@color/colorPrimary"
                     android:textColor="@color/colorPrimary"
                     android:textSize="24sp"
@@ -57,7 +57,7 @@
 
                 <com.rengwuxian.materialedittext.MaterialEditText
                     android:id="@+id/Password"
-                    android:hint="Password"
+                    android:hint="Mot de passe"
                     android:textColorHint="@color/colorPrimary"
                     android:textColor="@color/colorPrimary"
                     android:textSize="24sp"
@@ -83,7 +83,7 @@
 
             <Button
                 android:id="@+id/btn_sign_up"
-                android:text="Sign Up"
+                android:text="S'inscrire"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -91,7 +91,7 @@
 
             <Button
                 android:id="@+id/btn_sign_in"
-                android:text="Sign In"
+                android:text="Connexion"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_weight="1"
                 android:layout_width="0dp"

@@ -16,7 +16,7 @@
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/NewUserName"
-            android:hint="User name"
+            android:hint="Nom utilisateur"
             android:textColorHint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp"
@@ -30,7 +30,7 @@
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/NewPassword"
-            android:hint="Password"
+            android:hint="Mot de passe"
             android:textColorHint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp"

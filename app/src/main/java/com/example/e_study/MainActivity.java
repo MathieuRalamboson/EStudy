@@ -98,8 +98,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void showSignUpDialog() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
-        alertDialog.setTitle("Sign Up");
-        alertDialog.setMessage("Please fill full information");
+        alertDialog.setTitle("S'inscrire");
+        alertDialog.setMessage("Veuillez remplir toutes les informations.");
 
         LayoutInflater inflater = this.getLayoutInflater();
         View sign_up_layout = inflater.inflate(R.layout.sign_up_layout,null);
@@ -111,14 +111,14 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.setView(sign_up_layout);
         alertDialog.setIcon(R.drawable.ic_account_circle_black_24dp);
 
-        alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        alertDialog.setNegativeButton("Précedent", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
             }
         });
 
-        alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        alertDialog.setPositiveButton("Enregistrer", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 final User user = new User(NewUser.getText().toString(),

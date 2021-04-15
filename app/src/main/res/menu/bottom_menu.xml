@@ -13,7 +13,7 @@
     <item
         android:id="@+id/action_ranking"
         android:enabled="true"
-        android:title="Ranking"
+        android:title="Classement"
         android:icon="@drawable/ic_star_black_24dp"
         app:showAsAction="ifRoom" />
 
